@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   font-family: 'Space Mono', monospace;
+   font-weight: 700;
+   transition: all .3s ease-out;
+}
+
+:root {
+    /* * -------------------------- PAGE COLORS ------------------------ */   
+  
+      --clr-primary: hsl(172, 67%, 45%);
+      
+      --clr-neutral-800: hsl(183, 100%, 15%);
+      --clr-neutral-700: hsl(186, 14%, 43%);
+      --clr-neutral-600: hsl(184, 14%, 56%);
+      --clr-neutral-500: hsl(185, 41%, 84%);
+      --clr-neutral-400: hsl(189, 41%, 97%);
+      --clr-neutral-300: hsl(0, 0%, 100%);
+      
+/* * -------------------------- MOBILE Font SIZES ------------------------ */
+      
+      --fs-700: 2rem;         /* 32px */
+      --fs-600: 1.5rem;       /* 24px */
+      --fs-500: 1.25rem;      /* 20px */
+      --fs-400: 1rem;         /* 16px */
+      --fs-300: .8125rem      /* 13px */
+  
+      --lh-700: 3rem;         /* 48px */
+      --lh-600: 2.25rem;      /* 36px */
+      --lh-500: 1.875rem;     /* 20px */
+      --lh-400: 1.5rem;       /* 24px */
+      --lh-300: 1.25rem;      /* 20px */
+}
+
+/* * -------------------------- LAPTOP Font SIZES ------------------------ */
+
+@media screen and (min-width: 40em) {
+    :root {
+      --fs-700: 4.25rem;      /* 48px */
+  
+      --lh-700: 4.5rem;       /* 72px */
+    }
+}
+  
+
+
+
+body {
+    background-color: #C5E4E7;
+}
+
+.app__input-sec {
+    display: flex;
+    flex-direction: column;
+}

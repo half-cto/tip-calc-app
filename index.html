@@ -14,26 +14,39 @@
   
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-
+<main>
+    <section class="app">
+      <div class="app__input-sec">
+        <label for="bill">Bill</label> 
+        <input type="text" name="bill" id="bill">
+          Select Tip %
+         <button class="button-small" type="button">5%</button>
+         <button class="button-small" type="button">10%</button>
+         <button class="button-small" type="button">15%</button>
+         <button class="button-small" type="button">25%</button>
+         <button class="button-small" type="button">50%</button>
+        <input type="text" name="" id="" aria-label="Custom percentage">
+        <label for="people-cout">Number of People</label> 
+        <input type="text" name="people-cout" id="people-cout">
+      </div>
+      <div class="app_output-sec">
+        <div class="output-sec__result">
+          <div>
+            Tip Amount
+            / person
+          </div>
+          <span class="result" id="tip-result"></span>
+        </div>
+        <div class="output-sec__result">
+          <div>
+            Total
+            / person
+          </div>
+          <span class="result" id="tip-result"></span>
+        </div>
+        <button class="button-reset" type="button">Reset</button>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
