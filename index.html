@@ -20,18 +20,29 @@
     <section class="app">
       <div class="app__input-sec">
         <label for="bill">Bill</label> 
-        <input type="text" name="bill" id="bill" placeholder="0">
+        <input  type="text"
+                name="bill" 
+                id="bill" 
+                maxlength="7"
+                placeholder="0">
         <label for="button-small">Select Tip %</label>
         <div class="input-sec__btn-container" name>
-          <button class="button-small" type="button" id="button-small">5%</button>
-          <button class="button-small" type="button">10%</button>
-          <button class="button-small" type="button">15%</button>
-          <button class="button-small" type="button">25%</button>
-          <button class="button-small" type="button">50%</button>
+          <button class="button-small" type="button" id="button-small" value="5">5%</button>
+          <button class="button-small selected" type="button" value="10">10%</button>
+          <button class="button-small" type="button" value="15">15%</button>
+          <button class="button-small" type="button" value="25">25%</button>
+          <button class="button-small" type="button" value="50">50%</button>
           <input type="text" name="custom" id="custom" placeholder="Custom" aria-label="Custom percentage">
         </div>
-        <label for="people-count">Number of People</label> 
-        <input type="text" name="people-count" id="people-count" placeholder="0">
+        <div class="input-sec__people-cont">
+          <label for="people-count">Number of People</label>
+          <p class="error-msg hide">Can't be zero</p>
+        </div>
+        <input type="text"
+                name="people-count"
+                id="people-count"
+                maxlength="3"
+                placeholder="0">
       </div>
       <div class="app_output-sec">
         <div>
@@ -50,7 +61,7 @@
             <span class="result" id="total-result">$0.00</span>
           </div>
         </div>
-        <button class="button-reset" type="button" disabled>Reset</button>
+        <button id="reset" class="button-reset" type="button" disabled="true">Reset</button>
       </div>
     </section>
   </main>
