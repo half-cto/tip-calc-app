@@ -40,7 +40,7 @@
 
 @media screen and (min-width: 40em) {
     :root {
-      --fs-700: 4.25rem;      /* 48px */
+      --fs-700: 3rem;      /* 48px */
   
       --lh-700: 4.5rem;       /* 72px */
     }
@@ -56,6 +56,12 @@ body {
     min-width: 375px;
 }
 
+.hero-logo {
+    display: block;
+    margin-block: 3.125rem 2.5rem;
+    margin-inline: auto;
+}
+
 .app {
     display: flex;
     flex-direction: column;
@@ -66,12 +72,38 @@ body {
     gap: 2rem;
 }
 
+@media screen and (min-width: 40em) {
+    .app {
+        width: min(100% - 8rem, 920px);
+        margin-inline: auto;
+    }
+
+    .hero-logo {
+        margin-top: min(15% ,163px);
+        margin-bottom:  min(8% ,88px);
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .app {
+        flex-direction: row;
+        border-radius: 25px;
+        padding: 2rem
+    }
+}
 /* * ================== INPUT SECTION ================== */
 
 .app__input-sec {
     display: flex;
     flex-direction: column;
     padding-inline: .5rem;
+}
+
+@media screen and (min-width: 60em) {
+    .app__input-sec {
+        padding-inline: 0;
+        padding-block: .8125rem 1rem;
+    }
 }
 
 label {
@@ -101,7 +133,13 @@ input::placeholder {
     background-image: url(../images/icon-dollar.svg);
     background-repeat: no-repeat;
     background-position: 6% 50%;
-    margin-bottom: 2rem;
+    margin-block: .375rem 2rem;
+}
+
+@media screen and (min-width: 60em) {
+    #bill {
+        margin-block: .375rem 2.5rem;
+    }
 }
 
 .input-sec__btn-container {
@@ -126,8 +164,31 @@ input::placeholder {
     width: calc(50% - .5rem);
 }
 
+
 #custom::placeholder {
     color: var(--clr-neutral-800);
+}
+
+@media screen and (min-width: 60em) {
+    .input-sec__btn-container {
+        gap: .875rem;
+    }
+    
+    #custom,
+    .button-small {
+        width: calc(33.3% - .875rem);
+    }
+
+    #custom,
+    #custom::placeholder
+     {
+        text-align: center !important;
+        padding-inline: .5rem;
+    }    
+
+    .input-sec__btn-container {
+        margin-bottom: 2.5rem;
+    }
 }
 
 #people-count {
@@ -145,12 +206,23 @@ input::placeholder {
     padding: 1.75rem 1.375rem 1.5rem 1.375rem;
 }
 
+@media screen and (min-width: 60em) {
+    .app_output-sec {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 50%;
+        padding: 2.5rem;
+    }
+}
+
 .output-sec__result {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.25rem;
 }
+
 
 h2 {
     color: var(--clr-neutral-300);
@@ -180,4 +252,8 @@ p {
     text-transform: uppercase;
     border-radius: 5px;
     padding-block: .5625rem;
+}
+
+.button-reset:disabled {
+    background-color: #0D686D;
 }

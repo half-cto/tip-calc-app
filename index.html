@@ -15,7 +15,7 @@
 </head>
 <body>
   <main>
-    <img src="./images/logo.svg" alt="splitter logo">
+    <img class="hero-logo" src="./images/logo.svg" alt="splitter logo">
     <h1>Bill splitter app</h1>  
     <section class="app">
       <div class="app__input-sec">
@@ -31,24 +31,26 @@
           <input type="text" name="custom" id="custom" placeholder="Custom" aria-label="Custom percentage">
         </div>
         <label for="people-count">Number of People</label> 
-        <input type="text" name="people-count" id="people-count">
+        <input type="text" name="people-count" id="people-count" placeholder="0">
       </div>
       <div class="app_output-sec">
-        <div class="output-sec__result">
-          <div>
-            <h2>Tip Amount</h2>
-            <p>/ person</p>
+        <div>
+          <div class="output-sec__result">
+            <div>
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <span class="result" id="tip-result">$0.00</span>
           </div>
-          <span class="result" id="tip-result">$23.33</span>
-        </div>
-        <div class="output-sec__result">
-          <div>
-            <h2>Total</h2>
-            <p>/ person</p>
+          <div class="output-sec__result">
+            <div>
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <span class="result" id="total-result">$0.00</span>
           </div>
-          <span class="result" id="total-result">$22.5</span>
         </div>
-        <button class="button-reset" type="button">Reset</button>
+        <button class="button-reset" type="button" disabled>Reset</button>
       </div>
     </section>
   </main>
