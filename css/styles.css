@@ -134,6 +134,18 @@ input::placeholder {
     color: var(--clr-neutral-600);
 }
 
+/* * Remove Arrows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 #bill {
     background-image: url(../images/icon-dollar.svg);
@@ -230,6 +242,10 @@ input::placeholder {
 }
 
 .error {
+    outline: solid #E17457 3px;
+}
+
+.error:focus {
     outline: solid #E17457 3px;
 }
 
